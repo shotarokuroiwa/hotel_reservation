@@ -1,24 +1,38 @@
-# README
+# 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Reservation.com Project
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- Ruby 3.3+
+- PostgreSQL 15+
+- Bundler
 
-* System dependencies
+---
 
-* Configuration
+## Setup
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. **リポジトリをクローン**
+    
+    `git clone <リポジトリURL>` してプロジェクトディレクトリに移動
+    
+2. **Gem をインストール**
+    
+    `bundle install` を実行
+    
+3. **環境変数の設定**
+    - `cp .env.sample .env` を実行
+    - `.env` の `POSTGRES_USER=` にユーザ名を、`POSTGRES_PASSWORD=` にパスワードを記入
+        
+        ```
+        POSTGRES_USERE=hoge
+        POSTGRES_PASSWORD=9999
+        ```
+        
+4. **データベースの作成とマイグレーション**
+    
+    `rails db:prepare` を実行
+    
+5. **サーバー起動**
+    
+    `rails server` を実行して `http://localhost:3000` にアクセス
