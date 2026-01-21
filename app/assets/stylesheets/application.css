@@ -61,7 +61,7 @@ a {
 }
 
 .nav-link {
-  padding: 8px 16px;
+  padding: 8px 50px;
   border: 1px solid #007bff;
   border-radius: 4px;
   color: #007bff;
@@ -74,16 +74,42 @@ a {
   color: white;
 }
 
-.menu-toggle {
+.hamburger-menu-guest {
+  display: flex;
+  gap: 10px;
+}
+
+.hamburger-button {
   display: none;
-  font-size: 26px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
 }
 
 @media (max-width: 900px) {
+  .hamburger-menu-guest {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    flex-direction: column;
+    background: #181a1b;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    font-size: 1.3em;
+  }
+
+  .hamburger-button {
+    display: block;
+    cursor: pointer;
+    font-size: 1.3em;
+    margin-right: 10px;
+  }
+
+  .guest-menu:hover .hamburger-menu-guest {
+    display: flex;
+  }
+
   .user-name-nav {
     display: none;
   }
@@ -723,13 +749,21 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
   align-items: center;
   gap: 8px;
   background: none;
-  border: none;
   padding: 0;
   cursor: pointer;
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.5s ease;
 }
 
-.user-menu-button:focus {
-  outline: none;
+.user-menu-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.user-menu:hover .hamburger-menu {
+  display: flex;
 }
 
 .user-name-nav {
@@ -762,11 +796,6 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 
 .hamburger-menu .nav-link {
   display: block;
-}
-
-.user-menu:hover .hamburger-menu,
-.user-menu:focus-within .hamburger-menu {
-  display: flex;
 }
 
 .user-menu:hover .user-name {
