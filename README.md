@@ -22,11 +22,12 @@
     
 3. **環境変数の設定**
     - `cp .env.sample .env` を実行
-    - `.env` の `POSTGRES_USER=` にユーザ名を、`POSTGRES_PASSWORD=` にパスワードを記入
+    - `.env` の`DB_HOST`にホスト名を、`DB_USER=` にユーザ名を、`DB_PASSWORD=` にパスワードを記入
         
         ```
-        POSTGRES_USERE=hoge
-        POSTGRES_PASSWORD=9999
+        DB_HOST=
+        DB_USER=
+        DB_PASSWORD=
         ```
         
 4. **データベースの作成とマイグレーション**
