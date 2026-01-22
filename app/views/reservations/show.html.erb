@@ -11,6 +11,11 @@
     <span class="info-label">チェックアウト</span>
     <p class="info-value"><%= @reservation.check_out %></p>
   </div>
+  
+  <div class="info-item">
+    <span class="info-label">予約確定日</span>
+    <p class="info-value"><%= @reservation.created_at.strftime("%Y/%m/%d %H:%M") %></p>
+  </div>
 
   <div class="info-item">
     <span class="info-label">人数</span>

@@ -25,7 +25,8 @@
             <% end %>
             <div class="card-content">
               <h3><%= room.name %></h3>
-              <p>価格: <%= number_with_delimiter(room.price) %>円 / 泊</p>
+              <p class=card-content-address><%= room.address %></p>
+              <p><%= number_with_delimiter(room.price) %>円 / 泊</p>
             </div>
           </div>
         <% end %>

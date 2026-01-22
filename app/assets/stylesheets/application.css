@@ -353,6 +353,13 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 
 .card-content h3 {
   margin-top: 0;
+  font-size: 1.4em;
+  color: #007bff;
+}
+
+.card-content-address {
+  color: rgb(94, 94, 94) ;
+  font-size: 0.9em;
 }
 
 /* Recommended Destinations */
@@ -478,14 +485,44 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 }
 
 .room-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
   margin-bottom: 30px;
+  border-bottom: 1px solid rgb(88, 88, 88);
+  width: 100%;
 }
 
 .room-detail-header h1 {
+  border-bottom: none;
   font-size: 2.5em;
   margin: 0;
   color: #e8e6e3;
 }
+
+.back-button {
+  position: absolute;
+  left: 0;
+  padding: 6px 12px;
+  background-color: #181a1b;
+  border: 1px solid #444444;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #717171;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  color: #429dff;
+  border: 1px solid rgb(63, 145, 233);
+}
+
+.back-button .arrow {
+  font-size: 1.3em;
+}
+
 
 .room-detail-content {
   display: grid;
@@ -597,6 +634,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 }
 
 .card-title {
+  width: 100%;
   margin-bottom: 16px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 8px;
@@ -604,11 +642,12 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 
 .room-info p {
   margin: 6px 0;
+  font-size: 1.2em;
 }
 
 .room-description {
   margin-top: 15px;
-  color: #555;
+  color: #5e5e5e;
 }
 
 .form-group-reservation {
@@ -780,7 +819,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 .hamburger-menu {
   position: absolute;
   right: 0;
-  top: 110%;
+  top: 100%;
   display: none;
   flex-direction: column;
 
