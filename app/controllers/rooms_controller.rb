@@ -5,6 +5,7 @@ class RoomsController < ApplicationController
   # 自分の作成した施設一覧
   def index
     @rooms = current_user.rooms
+    @count = @rooms.count
   end
 
   def show

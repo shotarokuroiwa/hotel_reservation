@@ -1,5 +1,6 @@
 <h1>予約一覧</h1>
 <div class=facility-wrapper>
+  <p><%= @count.to_i %>件</p>
   <div class="grid-container">
     <% @reservations.each do |reservation| %>
       <%= link_to reservation_path(reservation), class: "card-link" do %>

@@ -14,7 +14,7 @@ class User < ApplicationRecord
   private
 
   def account_update?
-    password.present? || will_save_change_to_email?
+    !new_record? && (password.present? || will_save_change_to_email?)
   end
 
   def current_password_is_correct

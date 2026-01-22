@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new(sign_up_params)
     if @user.save
       redirect_to new_session_path, notice: "アカウントを登録しました"
     else
@@ -48,6 +48,15 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def sign_up_params
+    params.require(:user).permit(
+      :name,
+      :email,
+      :password,
+      :password_confirmation
+    )
+  end
 
   def account_update?
     params[:edit_type] == "account"

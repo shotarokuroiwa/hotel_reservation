@@ -23,6 +23,7 @@ class ReservationsController < ApplicationController
 
   def index
     @reservations = current_user.reservations.includes(:room)
+    @count = @reservations.count
   end
 
   def show

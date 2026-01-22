@@ -460,7 +460,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 }
 
 .file-upload-label:hover {
-  background-color: #4338ca;
+  background-color: #382e9b;
 }
 
 .file-upload-text {
@@ -721,10 +721,10 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 
 .profile-btn {
   background-color: #181a1b;
-  box-shadow: 0 5px 10px rgb(71, 128, 190);
+  box-shadow: 0 3px 7px rgb(71, 128, 190);
   border-radius: 8px;
   padding: 50px 0;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: center;
   box-sizing: border-box;
   display: flex;
@@ -753,7 +753,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
   cursor: pointer;
   padding: 8px 16px;
   border: 1px solid #007bff;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: background-color 0.5s ease;
 }
 
@@ -780,7 +780,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 .hamburger-menu {
   position: absolute;
   right: 0;
-  top: 100%;
+  top: 110%;
   display: none;
   flex-direction: column;
 
