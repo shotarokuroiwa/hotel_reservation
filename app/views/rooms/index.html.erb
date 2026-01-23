@@ -14,7 +14,8 @@
                 <h3><%= room.name %></h3>
                 <p class="card-content-address"><%= room.address %></p>
                 <p class="card-description"><%= room.description %></p>
-                <p><%= number_with_delimiter(room.price) %>円 / 泊</p>
+                <p>登録日: <%= l(room.created_at.to_date) %></p>
+                <p class="card-price"><%= number_with_delimiter(room.price) %>円 / 泊</p>
                 </div>
             </div>
             <% end %>

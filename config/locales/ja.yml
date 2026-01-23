@@ -2,6 +2,9 @@ ja:
   date:
     formats:
       default: "%Y/%m/%d"
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M"
   activerecord:
     models:
       room: 施設
@@ -35,6 +38,8 @@ ja:
               required: を入力してください
         reservation:
           attributes:
+            check_in:
+              must_be_today_or_later: は本日以降の日付を入力してください
             check_out:
               must_be_after_check_in: はチェックインより後の日付を入力してください
       format: "%{attribute}%{message}"

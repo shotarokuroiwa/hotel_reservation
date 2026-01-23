@@ -370,6 +370,14 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
   overflow: hidden;
 }
 
+.reservation-description {
+  color: rgb(138, 138, 138);
+}
+
+.card-price {
+  font-size: 1.3em;
+}
+
 /* Recommended Destinations */
 .recommended-destinations {
   display: grid;
