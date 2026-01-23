@@ -4,12 +4,12 @@
 <div class="room-detail-reservation">
   <div class="info-item">
     <span class="info-label">チェックイン</span>
-    <p class="info-value"><%= @reservation.check_in %></p>
+    <p class="info-value"><%= @reservation.check_in.strftime("%Y/%m/%d") %></p>
   </div>
 
   <div class="info-item">
     <span class="info-label">チェックアウト</span>
-    <p class="info-value"><%= @reservation.check_out %></p>
+    <p class="info-value"><%= @reservation.check_out.strftime("%Y/%m/%d") %></p>
   </div>
   
   <div class="info-item">

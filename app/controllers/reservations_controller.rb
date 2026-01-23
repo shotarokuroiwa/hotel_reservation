@@ -1,10 +1,27 @@
 class ReservationsController < ApplicationController
   before_action :require_login
-  before_action :set_room, only: [ :new, :create ]
-  before_action :build_reservation, only: [ :create ]
+  before_action :set_room, only: [ :new, :confirm, :create ]
+  before_action :build_reservation, only: [ :confirm, :create ]
 
   def new
-      @reservation = @room.reservations.new
+      @reservation = @room.reservations.new(prefill_reservation_params)
+  end
+
+  def confirm
+    @reservation.user = current_user
+
+    if @reservation.check_in.present? && @reservation.check_out.present?
+      @stay_days = (@reservation.check_out - @reservation.check_in).to_i
+    end
+
+    if @reservation.check_in.present? && @reservation.check_out.present? && @reservation.people.present?
+      @total_price = calculate_total(@reservation)
+    end
+
+    if @reservation.invalid?
+      flash.now[:alert] = "入力内容に不備があります"
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def create
@@ -52,6 +69,10 @@ class ReservationsController < ApplicationController
 
   def reservation_params
     params.require(:reservation).permit(:check_in, :check_out, :people)
+  end
+
+  def prefill_reservation_params
+    params.fetch(:reservation, {}).permit(:check_in, :check_out, :people)
   end
 
   def calculate_total(reservation)

@@ -10,8 +10,8 @@
           <% end %>
           <div class="card-content">
             <h3><%= reservation.room.name %></h3>
-            <p>チェックイン: <%= reservation.check_in %></p>
-            <p>チェックアウト: <%= reservation.check_out %></p>
+            <p>チェックイン: <%= reservation.check_in.strftime("%Y/%m/%d") %></p>
+            <p>チェックアウト: <%= reservation.check_out.strftime("%Y/%m/%d") %></p>
             <p>予約確定日: <%= reservation.created_at.strftime("%Y/%m/%d %H:%M") %></p>
             <p>人数: <%= reservation.people %>名</p>
             <p>合計金額: <%= number_with_delimiter(reservation.total_price) %>円</p>

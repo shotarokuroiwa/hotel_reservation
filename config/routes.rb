@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   resource :session, only: [ :new, :create, :destroy ]
 
   resources :rooms do
-    resource :reservation, only: [ :new, :create ]
+    resource :reservation, only: [ :new, :create ] do
+      post :confirm
+    end
   end
 
   resources :reservations, only: [ :index, :show ]
