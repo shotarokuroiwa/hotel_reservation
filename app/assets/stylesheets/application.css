@@ -287,7 +287,9 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 
 .btn-secondary {
   background-color: #6c757d;
+  width: 95%;
   color: white;
+  text-align: center;
 }
 
 .btn-secondary:hover {
@@ -373,7 +375,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 /* Recommended Destinations */
 .recommended-destinations {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
   margin: 0 auto;

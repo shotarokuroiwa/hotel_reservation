@@ -25,15 +25,10 @@
 <h2 class="recommended-title">おすすめの目的地</h2>
 <div class="recommended-destinations">
   <% [
-    { name: '北海道', image: 'hokkaido.jpg' },
+    { name: '札幌', image: 'hokkaido.jpg' },
     { name: '東京', image: 'tokyo.jpg' },
-    { name: '神奈川', image: 'kanagawa.jpg' },
-    { name: '愛知', image: 'aichi' },
     { name: '京都', image: 'kyoto' },
     { name: '大阪', image: 'osaka.jpg' },
-    { name: '福岡', image: 'hukuoka.jpg' },
-    { name: '沖縄', image: 'okinawa.png' },
-    { name: '石川', image: 'isikawa.jpg' },
   ].each do |dest| %>
     <%= link_to searches_path(area: dest[:name]), class: 'destination-card-link' do %>
       <div class="destination-card">
