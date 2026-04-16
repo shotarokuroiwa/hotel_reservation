@@ -39,8 +39,8 @@ production:
     #password: <%= ENV["hotel_reservation_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
- queue:
+  queue:
     <<: *primary_production
- cable:
+  cable:
     <<: *primary_production
  # database: path/to/persistent/storag
